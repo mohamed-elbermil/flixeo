@@ -67,3 +67,21 @@ nav button {
   padding: 10px 17px;
   border: none;
 }
+
+.rightElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav i {
+  color: red;
+    background: blue;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 54px;
+}
