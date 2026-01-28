@@ -1,6 +1,7 @@
 :root {
-  --background: #ffffff;
+  --background: #111111;
   --foreground: #171717;
+  --color : #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +40,30 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+nav {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav input {
+  background: #1b1b1b;
+  color: var(--color);
+  border-radius: 90px;
+  border: none;
+  padding: 10px 10px 10px 24px;
+  width: 60%
+}
+
+nav input:hover {
+  background: #1f1f20;
+}
+
+nav button {
+  border-radius: 44px;
+  padding: 10px 17px;
+  border: none;
 }
