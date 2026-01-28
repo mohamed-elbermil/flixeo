@@ -66,6 +66,7 @@ nav button {
   border-radius: 44px;
   padding: 10px 17px;
   border: none;
+  cursor: pointer;
 }
 
 .rightElement {
@@ -76,12 +77,29 @@ nav button {
 }
 
 nav i {
-  color: red;
+    color: red;
     background: blue;
-    width: 34px;
-    height: 34px;
-    display: flex;
+    width: 34px!important;
+    height: 34px!important;
+    display: flex!important;
     justify-content: center;
     align-items: center;
     border-radius: 54px;
+}
+
+.HeroSection img {
+  position: relative;
+  width: 56em;
+  border-radius: 14px;
+}
+
+.infos {
+  position: absolute;
+    bottom: 10em;
+    left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+    text-shadow: 0 2px 9px black;
 }
