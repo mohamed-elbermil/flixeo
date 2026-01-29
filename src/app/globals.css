@@ -50,12 +50,13 @@ nav {
 }
 
 nav input {
-  background: #1b1b1b;
   color: var(--color);
-  border-radius: 90px;
+  background: #1b1b1b;
   border: none;
+  border-radius: 90px;
+  width: 56.5%;
   padding: 10px 10px 10px 24px;
-  width: 60%
+  margin-left: 6.5%;
 }
 
 nav input:hover {
@@ -87,10 +88,27 @@ nav i {
     border-radius: 54px;
 }
 
+.HeroSection {
+  margin-left: 7%;
+}
+
 .HeroSection img {
   position: relative;
-  width: 56em;
+  width: 60%;
   border-radius: 14px;
+}
+
+.sidebar-left {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  width: 3%;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  border-right: solid 1px #ffffff4d;
 }
 
 .infos {
