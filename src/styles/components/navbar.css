@@ -1,8 +1,8 @@
 nav {
-    padding: 0 2em 1em 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 2em 15px 0;
+  display: flex;
 }
 
 nav input {

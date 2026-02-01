@@ -3,14 +3,20 @@ import styles from "./page.module.css";
 import TopBar from "@/components/layout/TopBar"
 import HeroSection from "@/components/movie/HeroSection";
 import SideBar from "@/components/layout/SideBar";
+import TopBoxOffice from "@/components/movie/TopBoxOffice";
 
 export default function Home() {
   return (
     <div>
-      <h1>Hello World</h1>
       <TopBar></TopBar>
       <SideBar></SideBar>
-      <HeroSection></HeroSection>
+      <div className="container">
+        <HeroSection></HeroSection>
+        <div style={{ width: '35%' }}>
+          <TopBoxOffice></TopBoxOffice>
+        </div>
+      </div>
     </div>
   );
 }
+
