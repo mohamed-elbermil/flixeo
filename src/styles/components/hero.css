@@ -1,0 +1,35 @@
+.HeroSection {
+  width: 62%;
+  height: 80vh;
+  position: relative;
+  left: 7%;
+}
+
+.HeroSection img {
+  border-radius: 13px;
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.infos {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  z-index: 10;
+  flex-direction: column;
+  gap: 16px;
+  width: 45%;
+  display: flex;
+  position: absolute;
+  top: 53%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.categorie {
+  color:  var(--primary-color);
+}

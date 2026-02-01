@@ -1,0 +1,14 @@
+:root {
+  --background: #111111;
+  --foreground: #171717;
+  --color : #fff;
+  --sidebar-width: 6rem;
+  --primary-color: rgb(255, 163, 33);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}

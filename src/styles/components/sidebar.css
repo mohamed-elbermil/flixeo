@@ -1,0 +1,16 @@
+.sidebar-left {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  width: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: solid 1px #ffffff4d;
+  background-color: var(--background);
+  z-index: 50;
+}

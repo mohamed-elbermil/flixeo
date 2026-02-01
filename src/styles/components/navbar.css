@@ -1,0 +1,64 @@
+nav {
+    padding: 0 2em 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav input {
+  color: var(--color);
+  background: #1b1b1b;
+  border: none;
+  border-radius: 90px;
+  width: 100%;
+  padding: 10px 10px 10px 39px;
+}
+
+nav input:hover {
+  background: #1f1f20;
+}
+
+nav button {
+  border-radius: 44px;
+  padding: 10px 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.rightElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav i {
+    color: red;
+    background: blue;
+    width: 34px!important;
+    height: 34px!important;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 54px;
+}
+
+.searchBar {
+  width: 56.5%;
+  position: relative;
+  display: inline-block;
+  margin-left: 7%;  
+}
+
+.searchBar::before {
+  content: "\f002";
+  color: #ffffff3b;
+  pointer-events: none;
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
