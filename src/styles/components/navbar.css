@@ -33,8 +33,7 @@ nav button {
 }
 
 nav i {
-    color: red;
-    background: blue;
+    background: var(--primary-color);
     width: 34px!important;
     height: 34px!important;
     display: flex!important;
