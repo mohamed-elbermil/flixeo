@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  /* gap: 3em; */
   width: var(--sidebar-width);
   height: 100vh;
   display: flex;
@@ -13,4 +13,18 @@
   border-right: solid 1px #ffffff4d;
   background-color: var(--background);
   z-index: 50;
+}
+
+.sidebar-left i {
+  font-size: 20px;
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-left i:hover {
+  background: #ffffff0f;
 }
