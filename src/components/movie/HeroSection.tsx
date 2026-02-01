@@ -30,7 +30,7 @@ export default function HeroSection() {
     <div className="infos">
         <h1>Title</h1>
         <span>2026 - EN</span>
-        <span>Action, Thriller, Crime</span>
+        <span className="categorie">Action, Thriller, Crime</span>
         <p>Résumé du contenu :  ipsum dolor sit amet consectetur adipisicing elit. Provident sit similique quasi!</p>
         <button>Watch</button>
     </div>
