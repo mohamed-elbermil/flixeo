@@ -45,7 +45,7 @@ a {
 }
 
 nav {
-    padding: 1em;
+    padding: 0 2em 1em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,9 +56,8 @@ nav input {
   background: #1b1b1b;
   border: none;
   border-radius: 90px;
-  width: 56.5%;
-  padding: 10px 10px 10px 24px;
-  margin-left: 6.5%;
+  width: 100%;
+  padding: 10px 10px 10px 39px;
 }
 
 nav input:hover {
@@ -147,6 +146,32 @@ button {
   cursor: pointer;
 }
 
+button i {
+  margin-right: 8px;
+}
+
+.searchBar {
+  width: 56.5%;
+  position: relative;
+  display: inline-block; /* ou flex si tu veux aligner mieux */
+  margin-left: 7%;  
+}
+
+.searchBar::before {
+  content: "\f002"; /* code Unicode FontAwesome pour la loupe */
+  color: #ffffff3b;
+  pointer-events: none;
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+
 .categorie {
   color:  #ffb900;
 }
+
