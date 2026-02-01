@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import TopBar from "@/components/layout/TopBar"
 import HeroSection from "@/components/movie/HeroSection";
-import SideBar from "@/components/layout/SideBar";
+import SideBar from "@/components/layout/Sidebar";
 import TopBoxOffice from "@/components/movie/TopBoxOffice";
 
 export default function Home() {
