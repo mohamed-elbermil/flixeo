@@ -1,4 +1,4 @@
-// Carte d’un film 
+// Carte d’un film
 
 // Contient :
 
@@ -30,27 +30,38 @@
 
 // C’est le cœur visuel de la page.
 
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import styles from '../../styles/components/movieCard.module.css'
+import { useState } from "react";
+import styles from "../../styles/components/movieCard.module.css";
+import { Movie } from "@/types/tmdb";
+import { tmdbService } from "@/services/tmdbService";
 
-export default function MovieCard() {
-  const [open, setOpen] = useState(false)
+interface MovieCardProps {
+  movie: Movie;
+}
+
+export default function MovieCard({ movie }: MovieCardProps) {
+  const [open, setOpen] = useState(false);
+
+  const title = movie.title || movie.name;
+  const releaseDate = movie.release_date || movie.first_air_date;
+  const year = releaseDate ? new Date(releaseDate).getFullYear() : "N/A";
+  const rating = movie.vote_average.toFixed(1);
+  const posterUrl = tmdbService.getImageUrl(movie.poster_path, "medium");
 
   return (
     <div className={styles.movieCard}>
-      <img src="/avatar-cover.jpg" alt="Avatar The Way of Water" />
+      <img src={posterUrl} alt={title} />
 
-      <div className={styles.container}>
+      <div className="infos-inline">
         <div className={styles.review}>
           <i className="fa-solid fa-star"></i>
-          <span>8.5</span>
+          <span>{rating}</span>
         </div>
 
         <div className={styles.type}>
-          <span>Movie</span>
+          <span>{movie.media_type === "tv" ? "Série" : "Film"}</span>
         </div>
       </div>
 
@@ -64,16 +75,15 @@ export default function MovieCard() {
 
       {open && (
         <div className={styles.menu}>
-          <button><i className="fa-solid fa-plus"></i>Watchlist</button>
-          <button><i className="fa-solid fa-bookmark"></i> Favoris</button>
+          <button>➕ Watchlist</button>
+          <button>⭐ Favoris</button>
         </div>
       )}
 
       <div className={styles.title}>
-        <p>Avatar: The Way of Water</p>
-        <span>2026</span>
+        <p>{title}</p>
+        <span>{year}</span>
       </div>
-
     </div>
-  )
+  );
 }

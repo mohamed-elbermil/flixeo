@@ -1,6 +1,6 @@
 .movieCard {
   position: relative;
-  width: 15em;
+  width: 13em;
   border-radius: 12px;
   overflow: hidden;
   color: white;
@@ -28,15 +28,18 @@
 }
 
 .type {
+  z-index: 2;
+  text-transform: uppercase;
+  background: #000000b8;
+  border-radius: 56px;
+  margin-right: 1em;
+  padding: 4px 11px;
+  font-size: .8em;
   top: 10px;
   right: 40px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 4px 8px;
-  border-radius: 56px;
-  font-size: 0.8em;
-  z-index: 2;
-  margin-right: 1em;
-  text-transform: uppercase;
+  padding: 6px 18px;
+  backdrop-filter: blur(51px);
+  font-weight: 600;
 }
 
 .menuButton {

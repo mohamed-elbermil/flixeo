@@ -4,9 +4,9 @@ nav {
   padding: 15px 2em 15px 0;
   display: flex;
   position: fixed;
-  width: 89%;
   z-index: 9999999;
   background: #111111;
+  width: 94%;
 }
 
 nav input {
