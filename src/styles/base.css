@@ -42,8 +42,6 @@ a {
 }
 
 button {
-  width: 7.5em;
-  padding: 10px 14px;
   font-size: 17px;
   border: none;
   border-radius: 99px;
@@ -51,12 +49,32 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #da8b1c;
+}
+
+.buttonLong {
+  padding: 7px 21px 7px 7px;
+}
+
 button i {
   margin-right: 8px;
   font-size: 20px;
 }
 
+.menuButton {
+  width: 2em;
+  height: 2em;
+  background: #ffffffa6;
+  backdrop-filter: blur(61px);
+}
 
 .container {
   display: flex;
+}
+
+.container-movies {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }

@@ -4,6 +4,7 @@ import TopBar from "@/components/layout/TopBar"
 import HeroSection from "@/components/movie/HeroSection";
 import SideBar from "@/components/layout/Sidebar";
 import TopBoxOffice from "@/components/movie/TopBoxOffice";
+import MovieCard from "@/components/movie/MovieCard";
 
 export default function Home() {
   return (
@@ -15,6 +16,10 @@ export default function Home() {
         <div style={{ width: '35%' }}>
           <TopBoxOffice></TopBoxOffice>
         </div>
+      </div>
+      <div className="container-movies">
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
       </div>
     </div>
   );
