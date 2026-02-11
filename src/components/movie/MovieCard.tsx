@@ -64,8 +64,8 @@ export default function MovieCard() {
 
       {open && (
         <div className={styles.menu}>
-          <button>➕ Watchlist</button>
-          <button>⭐ Favoris</button>
+          <button><i className="fa-solid fa-plus"></i>Watchlist</button>
+          <button><i className="fa-solid fa-bookmark"></i> Favoris</button>
         </div>
       )}
 
