@@ -71,7 +71,7 @@ button i {
 
 .container {
   display: flex;
-  margin: 0 6em;
+  margin: 0 2em;
 }
 
 .container:nth-of-type(1) {

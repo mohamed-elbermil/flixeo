@@ -8,6 +8,10 @@
   overflow-y: auto;
 }
 
+.top-box-office::-webkit-scrollbar {
+  display: none;
+}
+
 .tbo-header {
   margin-bottom: 20px;
 }
