@@ -3,6 +3,10 @@ nav {
   align-items: center;
   padding: 15px 2em 15px 0;
   display: flex;
+  position: fixed;
+  width: 89%;
+  z-index: 9999999;
+  background: #111111;
 }
 
 nav input {
@@ -44,9 +48,10 @@ nav i {
 
 .searchBar {
   width: 56.5%;
+  margin-left: 7%;
+  display: flex;
   position: relative;
-  display: inline-block;
-  margin-left: 7%;  
+  gap: 8px;
 }
 
 .searchBar::before {

@@ -2,12 +2,11 @@
   position: relative;
   width: 100%;
   height: 80vh;
-  margin-left: 7%;
 }
 
 .HeroSection img {
   border-radius: 13px;
-  width: 90%;
+  width: 100%;
   height: 60vh;
   object-fit: cover;
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);

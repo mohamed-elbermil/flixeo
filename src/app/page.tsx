@@ -17,7 +17,7 @@ export default function Home() {
           <TopBoxOffice></TopBoxOffice>
         </div>
       </div>
-      <div className="container-movies">
+      <div className="container-movies container">
         <MovieCard></MovieCard>
         <MovieCard></MovieCard>
       </div>

@@ -71,6 +71,12 @@ button i {
 
 .container {
   display: flex;
+  margin: 0 6em;
+}
+
+.container:nth-of-type(1) {
+  padding-top: 74px;
+  gap:14px;
 }
 
 .container-movies {
