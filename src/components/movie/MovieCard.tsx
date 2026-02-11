@@ -53,6 +53,12 @@ export default function MovieCard({ movie }: MovieCardProps) {
   return (
     <div className={styles.movieCard}>
       <img src={posterUrl} alt={title} />
+      
+      <div className={styles.playOverlay}>
+        <div className={styles.playIcon}>
+        <i class="fa-regular fa-circle-play"></i>
+        </div>
+      </div>
 
       <div className="infos-inline">
         <div className={styles.review}>

@@ -25,6 +25,7 @@
   padding: 1em 0;
   scrollbar-width: none; /* Firefox */
   scroll-behavior: smooth;
+  width: 82em;
 }
 
 .rowList::-webkit-scrollbar {
