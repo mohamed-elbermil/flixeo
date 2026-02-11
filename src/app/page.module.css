@@ -120,6 +120,13 @@ a.secondary {
   width: 35%;
 }
 
+.contentRows {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .moviesGrid {
   display: flex;
   flex-wrap: wrap;

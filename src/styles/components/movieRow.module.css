@@ -1,0 +1,79 @@
+.movieRow {
+  padding-left: 7%;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.rowTitle {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.rowContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rowList {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1em;
+  padding: 1em 0;
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+.rowList::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  opacity: 1; /* Toujours visible */
+  margin: 0;
+}
+
+.arrow i {
+  margin: 0;
+  font-size: 16px;
+}
+
+.movieRow:hover .arrow {
+  opacity: 1;
+}
+
+.arrow:hover {
+  background: none;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 20px;
+}
+
+.rowList > div {
+  flex: 0 0 auto;
+}

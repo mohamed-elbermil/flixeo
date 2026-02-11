@@ -7,12 +7,16 @@ import HeroSection from "@/components/movie/HeroSection";
 import SideBar from "@/components/layout/Sidebar";
 import TopBoxOffice from "@/components/movie/TopBoxOffice";
 import MovieCard from "@/components/movie/MovieCard";
+import MovieRow from "@/components/movie/MovieRow";
 import { tmdbService } from "@/services/tmdbService";
 import { Movie } from "@/types/tmdb";
 
 export default function Home() {
-  const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
+  const [trendingAll, setTrendingAll] = useState<Movie[]>([]);
   const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
+  const [topRatedMovies, setTopRatedMovies] = useState<Movie[]>([]);
+  const [topRatedTV, setTopRatedTV] = useState<Movie[]>([]);
+  const [recommendations, setRecommendations] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -20,13 +24,25 @@ export default function Home() {
     const loadData = async () => {
       try {
         setLoading(true);
-        const [trending, popular] = await Promise.all([
+        const [trending, popular, topMovies, topTV] = await Promise.all([
           tmdbService.getTrending("all", "week"),
           tmdbService.getPopularMovies(),
+          tmdbService.getTopRatedMovies(),
+          tmdbService.getTopRatedTV(),
         ]);
 
-        setTrendingMovies(trending.results);
+        setTrendingAll(trending.results);
         setPopularMovies(popular.results);
+        setTopRatedMovies(topMovies.results);
+        setTopRatedTV(topTV.results);
+
+        // Fetch recommendations based on the first trending movie if it exists
+        if (trending.results.length > 0) {
+          const recs = await tmdbService.getRecommendations(
+            trending.results[0].id,
+          );
+          setRecommendations(recs.results);
+        }
       } catch (err) {
         setError(
           "Impossible de charger les données de TMDB. Vérifiez votre clé API.",
@@ -43,7 +59,7 @@ export default function Home() {
   if (loading) return <div className={styles.loading}>Chargement...</div>;
   if (error) return <div className={styles.error}>{error}</div>;
 
-  const heroMovie = trendingMovies[0];
+  const heroMovie = trendingAll[0];
 
   return (
     <div>
@@ -55,10 +71,18 @@ export default function Home() {
           <TopBoxOffice movies={popularMovies}></TopBoxOffice>
         </div>
       </div>
-      <div className={styles.moviesGrid}>
-        {trendingMovies.slice(1, 7).map((movie) => (
-          <MovieCard key={movie.id} movie={movie}></MovieCard>
-        ))}
+
+      <div className={styles.contentRows}>
+        <MovieRow
+          title="Tendances de la semaine"
+          movies={trendingAll.slice(1)}
+        />
+        <MovieRow title="Les mieux notés au cinéma" movies={topRatedMovies} />
+        <MovieRow title="Séries incontournables" movies={topRatedTV} />
+        <MovieRow
+          title="Parce que vous avez aimé le contenu à l'affiche"
+          movies={recommendations}
+        />
       </div>
     </div>
   );
