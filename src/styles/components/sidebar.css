@@ -16,13 +16,14 @@
 }
 
 .sidebar-left i {
-  font-size: 20px;
-  padding: 30px 0;
-  width: 100%;
-  display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  width: 100%;
+  padding: 30px 0;
+  font-size: 20px;
+  display: flex;
+  color: #ffffffc4;
 }
 
 .sidebar-left i:hover {

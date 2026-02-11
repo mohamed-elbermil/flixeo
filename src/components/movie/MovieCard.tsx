@@ -33,6 +33,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import styles from "../../styles/components/movieCard.module.css";
 import { Movie } from "@/types/tmdb";
 import { tmdbService } from "@/services/tmdbService";
@@ -49,16 +50,20 @@ export default function MovieCard({ movie }: MovieCardProps) {
   const year = releaseDate ? new Date(releaseDate).getFullYear() : "N/A";
   const rating = movie.vote_average.toFixed(1);
   const posterUrl = tmdbService.getImageUrl(movie.poster_path, "medium");
+  const detailUrl =
+    movie.media_type === "tv" ? `/tv/${movie.id}` : `/movie/${movie.id}`;
 
   return (
     <div className={styles.movieCard}>
-      <img src={posterUrl} alt={title} />
-      
-      <div className={styles.playOverlay}>
-        <div className={styles.playIcon}>
-        <i class="fa-regular fa-circle-play"></i>
+      <Link href={detailUrl} className={styles.cardLink}>
+        <img src={posterUrl} alt={title} />
+
+        <div className={styles.playOverlay}>
+          <div className={styles.playIcon}>
+            <i className="fa-solid fa-play"></i>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="infos-inline">
         <div className={styles.review}>

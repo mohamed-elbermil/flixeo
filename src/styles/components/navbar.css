@@ -1,12 +1,19 @@
 nav {
   justify-content: space-between;
   align-items: center;
-  padding: 15px 2em 15px 0;
+  padding: 15px 2em 15px 7%;
   display: flex;
   position: fixed;
   z-index: 9999999;
   background: #111111;
-  width: 94%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo-link {
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 nav input {
@@ -29,6 +36,87 @@ nav button {
   cursor: pointer;
 }
 
+.mic-button {
+  position: relative;
+  background: var(--primary-color);
+  color: white;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 38px;
+  padding: 0;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.mic-button i {
+  background: none;
+  width: auto !important;
+  height: auto !important;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  margin: 0;
+  color: #111111;
+  font-size: 18px;
+}
+
+.mic-button:hover {
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mic-button:hover .particle {
+  opacity: 1;
+  animation: particle-fly 1s infinite ease-out;
+}
+
+.particle:nth-child(1) { --x: -20px; --y: -20px; animation-delay: 0s; }
+.particle:nth-child(2) { --x: 20px; --y: -15px; animation-delay: 0.2s; }
+.particle:nth-child(3) { --x: -15px; --y: 20px; animation-delay: 0.4s; }
+.particle:nth-child(4) { --x: 18px; --y: 18px; animation-delay: 0.1s; }
+.particle:nth-child(5) { --x: 0px; --y: -25px; animation-delay: 0.3s; }
+.particle:nth-child(6) { --x: -22px; --y: 5px; animation-delay: 0.5s; }
+
+@keyframes particle-fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
+}
+
 .rightElement {
   display: flex;
   align-items: center;
@@ -37,18 +125,18 @@ nav button {
 }
 
 nav i {
-    background: var(--primary-color);
-    width: 34px!important;
-    height: 34px!important;
-    display: flex!important;
-    justify-content: center;
-    align-items: center;
-    border-radius: 54px;
+  background: var(--primary-color);
+  width: 34px !important;
+  height: 34px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 54px;
 }
 
 .searchBar {
-  width: 56.5%;
-  margin-left: 3%;
+  width: 45%;
+  margin-left: 2%;
   display: flex;
   position: relative;
   gap: 8px;

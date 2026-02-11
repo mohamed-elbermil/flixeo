@@ -98,14 +98,18 @@ export const tmdbService = {
    * Get movie details
    */
   async getMovieDetails(id: number): Promise<MovieDetails> {
-    return this.fetchTMDB<MovieDetails>(`/movie/${id}`);
+    return this.fetchTMDB<MovieDetails>(`/movie/${id}`, {
+      append_to_response: "credits,recommendations",
+    });
   },
 
   /**
    * Get TV show details
    */
   async getTVDetails(id: number): Promise<MovieDetails> {
-    return this.fetchTMDB<MovieDetails>(`/tv/${id}`);
+    return this.fetchTMDB<MovieDetails>(`/tv/${id}`, {
+      append_to_response: "credits,recommendations",
+    });
   },
 
   /**
